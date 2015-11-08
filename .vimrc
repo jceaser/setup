@@ -27,3 +27,18 @@ exec "set listchars=tab:\uBB\uBB,nbsp:~,trail:\uB7"
 "	autocmd;
 "	autocmd BufEnter *.patch,*.rej,*.diff systax enable
 "augroup end
+
+execute pathogen#infect()
+call pathogen#helptags()
+syntax on
+filetype plugin indent on
+
+" create a bar for airline
+set t_Co=256
+set laststatus=2
+set guifont=Inconsolata-g\ for\ Powerline:h12
+
+let g:Powerline_symbols = 'fancy'
+let g:airline_powerline_fonts=1
+let g:airline_theme="papercolor"
+
