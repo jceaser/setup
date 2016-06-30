@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<root>
+
+<modifierdef>Private_Hyper</modifierdef>
+
+<vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_bbedit</name>
+    <url type="file">/Users/Shared/Applications/BBEdit.app</url>
+</vkopenurldef>
+
+<vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_itunes</name>
+    <url type="file">/Applications/iTunes.app</url>
+</vkopenurldef>
+
+<vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_slack</name>
+    <url type="file">/Applications/Slack.app</url>
+</vkopenurldef>
+
+<item>
+    <name>Remap Right Command to 'Hyper'</name>
+    <appendix>
+        OS X doesn't have a Hyper. This maps right control to Control + Shift +
+        Option + Command. You can use this key in your own custom keyboard
+        shortcuts you create in apps.
+    </appendix>
+
+    <identifier>space_cadet.right_cmd_to_hyper</identifier>
+
+    <autogen>
+        --KeyToKey--
+        KeyCode::COMMAND_R
+
+        ,KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L
+        ,KeyCode::VK_MODIFIER_Private_Hyper
+    </autogen>
+    
+    <autogen>
+        __KeyToKey__
+        KeyCode::B, ModifierFlag::Private_Hyper
+        , KeyCode::VK_OPEN_URL_bbedit
+    </autogen>
+    <autogen>
+        __KeyToKey__
+        KeyCode::M, ModifierFlag::Private_Hyper
+        , KeyCode::VK_OPEN_URL_itunes
+    </autogen>
+    <autogen>
+        __KeyToKey__
+        KeyCode::S, ModifierFlag::Private_Hyper
+        , KeyCode::VK_OPEN_URL_slack
+    </autogen>
+
+</item>
+
+<item>
+    <name>Alfred</name>
+    <identifier>private.hyper_a</identifier>
+    <autogen>
+        __KeyToKey__
+        KeyCode::A, ModifierFlag::Private_Hyper
+        , KeyCode::SPACE, ModifierFlag::OPTION_L
+    </autogen>
+</item>
+
+</root>
+

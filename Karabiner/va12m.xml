@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<root>
+
+    <devicevendordef>
+        <vendorname>varmilo</vendorname>
+        <vendorid>0x04d9</vendorid>
+    </devicevendordef>
+
+    <deviceproductdef>
+        <productname>va12m</productname>
+        <productid>0xa09f</productid>
+    </deviceproductdef>
+
+    <item>
+        <name>keypad to keypad</name>
+        <identifier>private.deviceproductdef</identifier>
+        <device_only>DeviceVendor::varmilo, DeviceProduct::va12m</device_only>
+        <autogen>__KeyToKey__ KeyCode::KEY_0, KeyCode::KEYPAD_0</autogen>
+        <autogen>__KeyToKey__ KeyCode::KEY_1, KeyCode::KEYPAD_1</autogen>
+        <autogen>__KeyToKey__ KeyCode::KEY_2, KeyCode::KEYPAD_2</autogen>
+        <autogen>__KeyToKey__ KeyCode::KEY_3, KeyCode::KEYPAD_3</autogen>
+        <autogen>__KeyToKey__ KeyCode::KEY_4, KeyCode::KEYPAD_4</autogen>
+        <autogen>__KeyToKey__ KeyCode::KEY_5, KeyCode::KEYPAD_5</autogen>
+        <autogen>__KeyToKey__ KeyCode::KEY_6, KeyCode::KEYPAD_6</autogen>
+        <autogen>__KeyToKey__ KeyCode::KEY_7, KeyCode::KEYPAD_7</autogen>
+        <autogen>__KeyToKey__ KeyCode::KEY_8, KeyCode::KEYPAD_8</autogen>
+        <autogen>__KeyToKey__ KeyCode::KEY_9, KeyCode::KEYPAD_9</autogen>
+        <!--autogen>__KeyToKey__ KeyCode::RETURN, KeyCode::KEYPAD_RETURN</autogen-->
+    </item>
+
+</root>
+
