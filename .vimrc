@@ -7,6 +7,9 @@ set tabstop=4
 "set t_kr=^[OC
 "set t_kl=^[OD
 
+nmap [3~  x
+imap [3~  1xi
+
 try
     highlight ColorColumn ctermbg=magenta
     call matchadd('ColorColumn', '\%81v', 100)
