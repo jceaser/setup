@@ -1,0 +1,17 @@
+#!/bin/bash
+
+function trap_ctrlc()
+{
+    tput rmcup # \033[?47l
+    exit
+}
+
+trap "trap_ctrlc" 2
+
+tput smcup # \033[?47h
+while [ true ] ; do
+    clear
+    printf "\033[1m%s\033[0m\n\033[4m%s\033[0m\n%s\n" "$(hostname)" "$(whoami)" "$(date)"
+    sleep 2
+done
+
