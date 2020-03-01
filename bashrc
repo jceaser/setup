@@ -16,9 +16,9 @@ alias llsn='ls -l | sort -n -k $1'  #sort by number colume
 
 alias cdf='cd `osascript -e "tell application \"Finder\" to if window 1 exists then if target of window 1 as string is not \":\" then get POSIX path of (target of window 1 as alias)"`'
 
+alias tprint='lp -d CATEX_TECH__POS5890U'
+
 export SVN_EDITOR=vim
-#export GREP_COLOR=always
-export GREP_OPTIONS="--color --exclude=*\.svn*"
 
 EDITOR=/usr/bin/vim
 export EDITOR
@@ -95,6 +95,13 @@ ps1
 test -r /sw/bin/init.sh && . /sw/bin/init.sh
 
 # MacPorts Installer addition on 2013-05-31_at_16:04:51: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+#export PATH=$PATH:/opt/local/bin:/opt/local/sbin
+
+export PATH=~/anaconda/bin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
 
+source ~/.xsh
+
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
