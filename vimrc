@@ -2,6 +2,14 @@ set term=ansi
 set number
 set tabstop=4
 
+au FileType ruby set makeprg=ruby\ %
+au FileType javascript set makeprg=node\ %
+au FileType python set makeprg=python\ %
+au FileType coffeescript set makeprg=coffee\ -c\ %
+au FileType script set makeprg=%
+
+noremap ,b :make<CR>
+
 "set t_ku=^[OA
 "set t_kd=^[OB
 "set t_kr=^[OC
