@@ -1,0 +1,46 @@
+{
+    "segments": [
+        "virtual_env",
+        "read_only",
+        "cwd",
+        "git",
+        "jobs",
+        {"type": "env","var": "FAKE_ENV","default":"no fake"},
+        {"type": "env","var": "LOGNAME"}
+    ],
+    "cwd":{"max_dir_size":1, "full_cwd":"False"},
+    "battery": {"low":10, "display_below":20},
+    "beat": {"show_at_sign":"True", "show_decimal":"False"},
+
+    "left":
+    {
+        "segments": [
+            "virtual_env"
+            ,"read_only"
+            ,"cwd"
+            ,"git"
+        ],
+        "cwd":{"max_dir_size":2, "full_cwd":"False"},
+        "battery": {"low":10, "display_below":20},
+        "beat": {"show_at_sign":"True", "show_decimal":"False"}
+    },
+    "right":
+    {
+        "segments": [
+            "exit_code",
+            "jobs",
+            "username",
+            "beat",
+            {
+                "type": "stdout",
+                "command": ["/Users/thomas/bin/dir_depth.sh"],
+                "fg_color": 15,
+                "bg_color": 161
+            }
+            ,{
+                "type": "env",
+                "var": "TMUX_PANE"
+            }
+        ]
+    }
+}
